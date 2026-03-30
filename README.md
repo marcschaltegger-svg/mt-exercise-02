@@ -33,12 +33,12 @@ Download and preprocess data:
 
 Train a model:
 
-    ./scripts/train_huckleberry.sh
+    ./scripts/train.sh
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
 Generate (sample) some text from a trained model with:
 
-    ./scripts/generate_huckleberry.sh
+    ./scripts/generate.sh
 
 
