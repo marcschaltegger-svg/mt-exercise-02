@@ -7,7 +7,7 @@ models=$base/models
 data=$base/data
 tools=$base/tools
 
-dataset="grimm"
+dataset="huckleberry"
 
 
 mkdir -p $models
@@ -22,7 +22,7 @@ SECONDS=0
         --epochs 40 \
         --log-interval 100 \
         --emsize 200 --nhid 200 --dropout 0.5 --tied \
-        --save $models/model_$dataset_$(date -d "today" +"%Y%m%d%H%M").pt
+        --save $models/model_$dataset.pt
 )
 
 echo "time taken:"
