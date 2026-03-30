@@ -7,19 +7,22 @@ models=$base/models
 data=$base/data
 tools=$base/tools
 
+dataset="grimm"
+
+
 mkdir -p $models
 
-num_threads=4
+num_threads=6
 device=""
 
 SECONDS=0
 
 (cd $tools/pytorch-examples/word_language_model &&
-    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python main.py --data $data/grimm \
+    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python main.py --data $data/$dataset \
         --epochs 40 \
         --log-interval 100 \
         --emsize 200 --nhid 200 --dropout 0.5 --tied \
-        --save $models/model.pt
+        --save $models/model_$dataset_$(date -d "today" +"%Y%m%d%H%M").pt
 )
 
 echo "time taken:"
