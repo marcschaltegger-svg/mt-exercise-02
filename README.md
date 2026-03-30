@@ -29,16 +29,16 @@ Download and install required software:
 
 Download and preprocess data:
 
-    ./scripts/download_data.sh
+    ./scripts/download_data_huckleberry.sh
 
 Train a model:
 
-    ./scripts/train.sh
+    ./scripts/train_huckleberry.sh
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
 Generate (sample) some text from a trained model with:
 
-    ./scripts/generate.sh
+    ./scripts/generate_huckleberry.sh
 
 
