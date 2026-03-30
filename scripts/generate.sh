@@ -9,7 +9,7 @@ tools=$base/tools
 samples=$base/samples
 
 dataset="huckleberry"
-dropout="_dropout-0.4"
+#dropout="_dropout-0.4"
 
 mkdir -p $samples
 
