@@ -9,11 +9,14 @@ mkdir -p $data
 
 tools=$base/tools
 
-# download Adventures of Huckleberry Finn by Mark Twain
+# download shakespeare
 
 mkdir -p $data/huckleberry
 
 mkdir -p $data/huckleberry/raw
+
+# Adventures of Huckleberry Finn by Mark Twain
+
 
 wget https://www.gutenberg.org/files/76/76-0.txt
 mv 76-0.txt $data/huckleberry/raw/tales.txt
