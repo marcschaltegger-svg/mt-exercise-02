@@ -1,1 +1,0 @@
-/home/marc/Python/MT/mt-exercise-02/tools/pytorch-examples/word_language_model/data/wikitext-2/train.txt
