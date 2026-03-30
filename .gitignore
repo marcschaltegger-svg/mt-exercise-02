@@ -1,0 +1,12 @@
+#downloaded datasets
+/data
+
+#trained models
+/models
+
+#generated samples
+/samples
+
+/venvs
+
+/tools
