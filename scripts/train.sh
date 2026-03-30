@@ -4,13 +4,19 @@ scripts=$(dirname "$0")
 base=$(realpath $scripts/..)
 
 models=$base/models
+logs=$base/logs
 data=$base/data
 tools=$base/tools
 
 dataset="huckleberry"
 
+dropout=0.2
+
+logpath=$logs/dropout$dropout.tsv
+
 
 mkdir -p $models
+mkdir -p $logs
 
 num_threads=6
 device=""
@@ -21,9 +27,11 @@ SECONDS=0
     CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python main.py --data $data/$dataset \
         --epochs 40 \
         --log-interval 100 \
-        --emsize 200 --nhid 200 --dropout 0.5 --tied \
-        --save $models/model_$dataset.pt
+        --emsize 250 --nhid 250 --dropout $dropout --tied \
+        --save $models/model_$dataset\_dropout-$dropout.pt \
+        --log-file $logpath
 )
 
 echo "time taken:"
 echo "$SECONDS seconds"
+
