@@ -10,13 +10,15 @@ tools=$base/tools
 
 dataset="huckleberry"
 
-dropout=0.2
+mkdir -p $models
+mkdir -p $logs
+
+dropout=0.4
 
 logpath=$logs/dropout$dropout.tsv
 
 
-mkdir -p $models
-mkdir -p $logs
+
 
 num_threads=6
 device=""
